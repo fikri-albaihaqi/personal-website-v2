@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${fonts.primary};
     font-size: ${fontSizes.base};
     background-color: ${colors.black};
-    color: ${colors.white};
+    color: white;
   }
 
   #root {

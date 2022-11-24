@@ -52,6 +52,33 @@ const Desc = styled.p`
   text-align: center;
 `
 
+const floating = keyframes`
+  0% {
+    transform: translateY(-8px);
+  }
+  
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-8px);
+  }
+`
+
+const Circle = styled.div`
+  position: relative;
+  top: 35%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px white;
+  border-radius: 100%;
+  animation: ${floating} 3s ease-in-out infinite;
+`
+
 const Header = () => {
   return (
     <Container>
@@ -63,6 +90,11 @@ const Header = () => {
         I’m a front-end web developer based in Bandung. I like to craft solid and beautiful <br />
         website with great user experience
       </Desc>
+      <Circle>
+        <span className="material-symbols-outlined text-white">
+          keyboard_arrow_down
+        </span>
+      </Circle>
     </Container>
   )
 }
