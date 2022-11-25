@@ -36,6 +36,7 @@ const theme = {
     md: `30px`,
     lg: `50px`,
     xl: `100px`,
+    xxl: `160px`,
   },
 
   breakpoints: {

@@ -30,7 +30,7 @@ const MenuIcon = styled.div`
 
   a:hover svg path {
     transition: 0.4s ease-in-out;
-    stroke: ${colors.yellow};
+    stroke: ${colors.purple};
   }
 
   a:hover svg path:last-child {

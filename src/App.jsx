@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import { GlobalStyle } from './styles'
 import styled from 'styled-components'
-import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Socials from './components/Socials'
 import Email from './components/Email'
+import Home from './components/Home'
 
 function App() {
   const Container = styled.div`
@@ -19,7 +18,7 @@ function App() {
       <Navbar />
       <Socials />
       <Email />
-      <Hero />
+      <Home />
     </Container>
   )
 }

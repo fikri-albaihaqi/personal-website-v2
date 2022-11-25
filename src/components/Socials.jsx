@@ -11,18 +11,6 @@ const LeftSide = styled.div`
   position: fixed;
   bottom: 0;
   left: 5%;
-
-  div:first-child {
-    svg {
-      fill: ${colors.grey};
-    }
-  }
-
-  div:first-child a:hover{
-    svg {
-      fill: white;
-    }
-  }
 `
 
 const [Github, Codepen, Linkedin] = Array(3).fill(styled.div`
