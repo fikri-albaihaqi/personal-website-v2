@@ -1,6 +1,6 @@
 import { GlobalStyle } from './styles'
 import styled from 'styled-components'
-import Navbar from './components/Navbar'
+import Navigation from './components/Navigation'
 import Socials from './components/Socials'
 import Email from './components/Email'
 import Home from './components/Home'
@@ -15,7 +15,7 @@ function App() {
   return (
     <Container>
       <GlobalStyle />
-      <Navbar />
+      <Navigation />
       <Socials />
       <Email />
       <Home />
