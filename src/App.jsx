@@ -5,7 +5,8 @@ import Navigation from './components/Navigation'
 import Home from './components/Home'
 import AllProjects from './components/AllProjects'
 import AboutMe from './components/AboutMe'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Container = styled.div`
     display: flex;
@@ -14,6 +15,8 @@ const Container = styled.div`
 `
 
 function App() {
+  AOS.init();
+  
   return (
     <Container>
       <GlobalStyle />

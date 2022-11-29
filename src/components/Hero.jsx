@@ -68,7 +68,7 @@ const floating = keyframes`
 
 const Circle = styled.div`
   position: relative;
-  top: 35%;
+  top: 25%;
   width: 30px;
   height: 30px;
   display: flex;
@@ -83,14 +83,14 @@ const Header = () => {
   return (
     <Container>
       <TextContainer>
-        <WelcomeText>HELLO, I'M</WelcomeText>
-        <Name>FIKRI ALBAIHAQI</Name>
+        <WelcomeText data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">HELLO, I'M</WelcomeText>
+        <Name data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">FIKRI ALBAIHAQI</Name>
       </TextContainer>
-      <Desc>
+      <Desc data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
         I’m a front-end web developer located in Bandung. I like to craft solid and beautiful <br />
         website with great user experience
       </Desc>
-      <Circle>
+      <Circle data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1600">
         <span className="material-symbols-outlined text-white">
           keyboard_arrow_down
         </span>

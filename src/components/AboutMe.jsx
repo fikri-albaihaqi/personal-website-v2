@@ -34,7 +34,7 @@ const Contact = styled.div`
   position: absolute;
   justify-content: space-between;
   width: 90vw;
-  bottom: 0;
+  bottom: 10%;
   margin-bottom: ${spacing.md};
 `
 
@@ -71,23 +71,23 @@ const AboutMe = () => {
         <WarpBackground />
       </BG>
       <AboutContainer>
-        <About>
+        <About data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
           Hello, my name is Fikri Albaihaqi.  I’m a front-end developer from Bandung, Indonesia.  I recently graduated majoring in
           informatics engineering at the Bandung State Polytechnic.  I’m always fascinated by the world of front-end website development
           and i enjoy building a solid, dynamic, and beautiful website.  I’m always curious to learn something when it comes to new
           technologies.
         </About>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
           <Social href=''>My resume</Social>
         </div>
       </AboutContainer>
       <Contact>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
           <Social href='' row>Github</Social>
           <Social href='' row>Codepen</Social>
           <Social href='' row>Linkedin</Social>
         </div>
-        <Social href=''>fikrialbaihaqi@gmail.com</Social>
+        <Social href='' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">fikrialbaihaqi@gmail.com</Social>
       </Contact>
     </Container>
   )

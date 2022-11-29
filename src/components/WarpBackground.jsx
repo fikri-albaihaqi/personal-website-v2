@@ -97,7 +97,7 @@ const WarpBackground = () => {
   }, [])
 
   return (
-    <Container ref={bg}></Container>
+    <Container ref={bg} data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1200"></Container>
   )
 }
 

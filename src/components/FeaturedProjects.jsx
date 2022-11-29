@@ -66,7 +66,7 @@ const SeeAllProject = styled(Link)`
   }
 
   &:hover::before {
-    height: 60%;
+    height: 80%;
   }
 `
 
@@ -74,8 +74,7 @@ const SeeAllProject = styled(Link)`
 const FeaturedProjects = () => {
   return (
     <Container>
-      <SectionTitle>Featured Side Projects</SectionTitle>
-      {/* <Desc>Some noteworthy projects</Desc> */}
+      <SectionTitle data-aos="fade-up" data-aos-duration="1000">Featured Side Projects</SectionTitle>
       <div>
         {
           allProjects.filter(project => project.featured).map((project, i) => (
@@ -83,7 +82,7 @@ const FeaturedProjects = () => {
           ))
         }
       </div>
-      <SeeAllProject to="/all-projects" state={{ allProjects: allProjects }}>
+      <SeeAllProject to="/all-projects" state={{ allProjects: allProjects }} data-aos="fade-up" data-aos-duration="1000">
         See all my projects
       </SeeAllProject>
     </Container>

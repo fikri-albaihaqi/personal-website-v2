@@ -120,9 +120,9 @@ const AllProjects = () => {
       </BG>
       <Socials />
       <Email />
-      <SectionTitle>All of My Side Projects</SectionTitle>
-      <Desc>A list of things i've worked on</Desc>
-      <table>
+      <SectionTitle data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">All of My Side Projects</SectionTitle>
+      <Desc data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">A list of things i've worked on</Desc>
+      <table data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
         <thead>
           <tr>
             <th>Title</th>

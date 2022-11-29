@@ -6,7 +6,11 @@ import { theme } from '../styles'
 const { colors, fontSizes, spacing } = theme
 
 const NavContainer = styled.nav`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: ${spacing.lg};
+  width: 100vw;
   background-color: ${({show}) => show ? colors.black : 'transparent'};
   position: ${({ show }) => show ? 'fixed' : 'absolute'};
   z-index: 10;
@@ -15,6 +19,7 @@ const NavContainer = styled.nav`
 const Nav = styled.div`
   width: 90vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 `
 
@@ -122,7 +127,7 @@ const MenuItem = styled.div`
     }
 
     &:hover::before {
-      height: 60%;
+      height: 80%;
     }
   }
 `
@@ -158,7 +163,7 @@ const Social = styled.a`
   }
 
   &:hover::before {
-    height: 60%;
+    height: 70%;
   }
 `
 
@@ -169,7 +174,7 @@ const Navbar = () => {
     <NavContainer show={showMenu}>
       <Nav>
         <Logo to='/'>FA</Logo>
-        <MenuIcon show={showMenu} onClick={() => setShowMenu(!showMenu)}>
+        <MenuIcon show={showMenu} onClick={() => setShowMenu(!showMenu)} >
           <a></a>
         </MenuIcon>
       </Nav>

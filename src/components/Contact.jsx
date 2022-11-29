@@ -67,21 +67,21 @@ const [Email, Whatsapp] = Array(3).fill(styled.div`
 const Contact = () => {
   return (
     <Container>
-      <GetInTouch>
+      <GetInTouch data-aos="fade-up" data-aos-duration="1000">
         LET'S GET IN TOUCH
       </GetInTouch>
-      <p>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay='600'>
         I’m currently available for full-time employment in Bandung <br />
         and freelance projects.
       </p>
       <ContactContainer>
         <Email>
-          <a href="">
+          <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='800'>
             <IconEmail />
           </a>
         </Email>
         <Whatsapp>
-          <a href="">
+          <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1000'>
             <IconWhatsapp />
           </a>
         </Whatsapp>

@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${fonts.primary};
   }
 
-  p, a, table {
+  p, a, table, span {
     font-family: ${fonts.secondary};
   }
 

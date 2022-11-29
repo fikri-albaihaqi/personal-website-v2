@@ -111,7 +111,7 @@ const [Github, External] = Array(3).fill(styled.div`
 const Project = ({ index, project }) => {
   return (
     index % 2 === 0 ? (
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1000" data-aos-delay='400'>
         <ProjectImage src={project.image} />
         <DetailContainer index={index}>
           <h3>{project.type}</h3>
@@ -144,7 +144,7 @@ const Project = ({ index, project }) => {
         </DetailContainer>
       </Container>
     ) : (
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="1000" data-aos-delay='400'>
         <DetailContainer index={index}>
           <h3>{project.type}</h3>
           <a href={project.external} target='_blank'>
