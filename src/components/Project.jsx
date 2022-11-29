@@ -9,13 +9,14 @@ const Container = styled.div`
   width: 70vw;
   display: flex;
   background-color: ${colors.darkGrey};
+  border-radius: 4px;
   padding: ${spacing.md};
   margin: ${spacing.xxl} 0;
 `
 
 const ProjectImage = styled.img`
   min-width: 560px;
-  border-radius: 16px;
+  border-radius: 4px;
 `
 
 const gradient = keyframes`
@@ -24,11 +25,11 @@ const gradient = keyframes`
   }
 `
 
-const TitleContainer = styled.div`
+const DetailContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: ${({index}) => index % 2 === 0 ? 'flex-end' : 'flex-start'};
 
   h3 {
     color: ${colors.grey};
@@ -64,7 +65,8 @@ const TitleContainer = styled.div`
 const Detail = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: ${spacing.md};
+  margin-left: ${({index}) => index % 2 === 0 ? '24px' : '0'};
+  margin-right: ${({index}) => index % 2 !== 0 ? '24px' : '0'};
 
   p {
     font-size: ${fontSizes.xl};
@@ -106,40 +108,75 @@ const [Github, External] = Array(3).fill(styled.div`
   }
 `)
 
-const Project = ({ project }) => {
+const Project = ({ index, project }) => {
   return (
-    <Container>
-      <ProjectImage src={project.image} />
-      <TitleContainer>
-        <h3>{project.type}</h3>
-        <a href={project.links[1]} target='_blank'>
-          <h1>{project.title}</h1>
-        </a>
-        <Detail>
-          <p>
-            {project.desc}
-          </p>
-          <Line />
-          <TechContainer>
-            <Tech>Vue JS</Tech>
-            <Tech>Tailwind CSS</Tech>
-            <Tech>The Movie Database API</Tech>
-          </TechContainer>
-          <ExternalLink>
-            <Github>
-              <a href={project.links[0]}>
-                <IconGithub />
-              </a>
-            </Github>
-            <External>
-              <a href={project.links[1]} target='_blank'>
-                <IconExternal />
-              </a>
-            </External>
-          </ExternalLink>
-        </Detail>
-      </TitleContainer>
-    </Container>
+    index % 2 === 0 ? (
+      <Container data-aos="fade-up" data-aos-duration="1000" data-aos-delay='400'>
+        <ProjectImage src={project.image} />
+        <DetailContainer index={index}>
+          <h3>{project.type}</h3>
+          <a href={project.external} target='_blank'>
+            <h1>{project.title}</h1>
+          </a>
+          <Detail index={index}>
+            <p>
+              {project.desc}
+            </p>
+            <Line />
+            <TechContainer>
+              <Tech>Vue JS</Tech>
+              <Tech>Tailwind CSS</Tech>
+              <Tech>The Movie Database API</Tech>
+            </TechContainer>
+            <ExternalLink>
+              <Github>
+                <a href={project.github} target='_blank'>
+                  <IconGithub />
+                </a>
+              </Github>
+              <External>
+                <a href={project.external} target='_blank'>
+                  <IconExternal />
+                </a>
+              </External>
+            </ExternalLink>
+          </Detail>
+        </DetailContainer>
+      </Container>
+    ) : (
+      <Container data-aos="fade-up" data-aos-duration="1000" data-aos-delay='400'>
+        <DetailContainer index={index}>
+          <h3>{project.type}</h3>
+          <a href={project.external} target='_blank'>
+            <h1>{project.title}</h1>
+          </a>
+          <Detail>
+            <p>
+              {project.desc}
+            </p>
+            <Line />
+            <TechContainer>
+              <Tech>Vue JS</Tech>
+              <Tech>Tailwind CSS</Tech>
+              <Tech>The Movie Database API</Tech>
+            </TechContainer>
+            <ExternalLink>
+              <Github>
+                <a href={project.github} target='_blank'>
+                  <IconGithub />
+                </a>
+              </Github>
+              <External>
+                <a href={project.external} target='_blank'>
+                  <IconExternal />
+                </a>
+              </External>
+            </ExternalLink>
+          </Detail>
+        </DetailContainer>
+        <ProjectImage src={project.image} />
+      </Container>
+    )
   )
 }
 

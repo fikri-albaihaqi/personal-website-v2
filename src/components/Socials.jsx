@@ -35,7 +35,7 @@ const LeftLine = styled.div`
 
 const Socials = () => {
   return (
-    <LeftSide>
+    <LeftSide data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
       <Github>
         <a href="https://github.com/fikri-albaihaqi" target='_blank'>
           <IconGithub />

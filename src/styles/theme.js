@@ -10,7 +10,8 @@ const theme = {
   },
 
   fonts: {
-    primary: 'Reem Kufi, sans-serif;'
+    primary: 'Reem Kufi, sans-serif',
+    secondary: 'Josefin Sans, sans-serif',
   },
 
   fontSizes: {
@@ -29,6 +30,18 @@ const theme = {
     x9l: `128px`,
   },
 
+  fontWeights: {
+    thin: `100`,
+    extralight: `200`,
+    light: `300`,
+    normal: `400`,
+    medium: `500`,
+    semibold: `600`,
+    bold: `700`,
+    extrabold: `800`,
+    black: `900`,
+  },
+
   spacing: {
     xs: `5px`,
     sm: `10px`,
@@ -36,7 +49,7 @@ const theme = {
     md: `30px`,
     lg: `50px`,
     xl: `100px`,
-    xxl: `160px`,
+    xxl: `200px`,
   },
 
   breakpoints: {

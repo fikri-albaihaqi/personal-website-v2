@@ -22,13 +22,13 @@ const RightSide = styled.div`
 const RightLine = styled.div`
   border-right: 1px solid ${colors.grey};
   height: 120px;
-  margin-right: 14px;
+  margin-right: 8px;
   margin-top: ${spacing.sm};
 `
 
 const Email = () => {
   return (
-    <RightSide>
+    <RightSide data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
       <a href="">
         fikrialbaihaqi@gmail.com
       </a>

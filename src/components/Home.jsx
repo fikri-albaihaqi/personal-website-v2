@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import Hero from './Hero'
 import FeaturedProjects from './FeaturedProjects'
 import Contact from './Contact'
+import Socials from './Socials'
+import Email from './Email'
+import WarpBackground from './WarpBackground'
 
 const Container = styled.div`
     display: flex;
@@ -13,6 +16,9 @@ const Container = styled.div`
 const Home = () => {
   return (
     <Container>
+      <WarpBackground />
+      <Socials />
+      <Email />
       <Hero />
       <FeaturedProjects />
       <Contact />
