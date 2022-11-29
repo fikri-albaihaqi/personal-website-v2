@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { theme } from '../styles'
+import WarpBackground from './WarpBackground'
+
 const { colors, fontSizes, spacing } = theme
 
 const Container = styled.div`
@@ -8,6 +10,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`
+
+const BG = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
 `
 
 const AboutContainer = styled.div`
@@ -58,6 +67,9 @@ const Social = styled.a`
 const AboutMe = () => {
   return (
     <Container>
+      <BG>
+        <WarpBackground />
+      </BG>
       <AboutContainer>
         <About>
           Hello, my name is Fikri Albaihaqi.  I’m a front-end developer from Bandung, Indonesia.  I recently graduated majoring in

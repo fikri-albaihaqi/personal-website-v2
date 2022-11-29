@@ -5,7 +5,6 @@ import Navigation from './components/Navigation'
 import Home from './components/Home'
 import AllProjects from './components/AllProjects'
 import AboutMe from './components/AboutMe'
-import WarpBackground from './components/WarpBackground'
 
 
 const Container = styled.div`
@@ -16,18 +15,15 @@ const Container = styled.div`
 
 function App() {
   return (
-    <BrowserRouter>
-      <Container>
-        <GlobalStyle />
-        <WarpBackground />
-        <Navigation />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/all-projects' element={<AllProjects />} />
-          <Route path='/about' element={<AboutMe />} />
-        </Routes>
-      </Container>
-    </BrowserRouter>
+    <Container>
+      <GlobalStyle />
+      <Navigation />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/all-projects' element={<AllProjects />} />
+        <Route path='/about' element={<AboutMe />} />
+      </Routes>
+    </Container>
   )
 }
 

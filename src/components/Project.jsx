@@ -8,13 +8,15 @@ const { colors, fontSizes, spacing } = theme
 const Container = styled.div`
   width: 70vw;
   display: flex;
-  /* background-color: ${colors.darkGrey}; */
+  background-color: ${colors.darkGrey};
+  border-radius: 4px;
   padding: ${spacing.md};
   margin: ${spacing.xxl} 0;
 `
 
 const ProjectImage = styled.img`
   min-width: 560px;
+  border-radius: 4px;
 `
 
 const gradient = keyframes`

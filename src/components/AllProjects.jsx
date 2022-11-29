@@ -7,6 +7,14 @@ import Socials from './Socials'
 import Email from "./Email"
 import IconGithub from "./icons/IconGithub"
 import IconExternal from "./icons/IconExternal"
+import WarpBackground from './WarpBackground'
+
+const BG = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+`
 
 const Container = styled.div`
   display: flex;
@@ -107,6 +115,9 @@ const AllProjects = () => {
 
   return (
     <Container>
+      <BG>
+        <WarpBackground />
+      </BG>
       <Socials />
       <Email />
       <SectionTitle>All of My Side Projects</SectionTitle>
@@ -122,7 +133,7 @@ const AllProjects = () => {
         </thead>
         <tbody>
           {projects.map((project, i) => (
-            <tr>
+            <tr key={i}>
               <td>{project.title}</td>
               <td>
                 {project.tech?.length > 0 &&

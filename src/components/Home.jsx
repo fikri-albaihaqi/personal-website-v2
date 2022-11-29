@@ -16,6 +16,7 @@ const Container = styled.div`
 const Home = () => {
   return (
     <Container>
+      <WarpBackground />
       <Socials />
       <Email />
       <Hero />
