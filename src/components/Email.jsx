@@ -22,7 +22,7 @@ const RightSide = styled.div`
 const RightLine = styled.div`
   border-right: 1px solid ${colors.grey};
   height: 120px;
-  margin-right: 14px;
+  margin-right: 8px;
   margin-top: ${spacing.sm};
 `
 

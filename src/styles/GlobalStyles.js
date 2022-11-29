@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100%;
     overflow-x: hidden;
-    font-family: ${fonts.primary};
     font-size: ${fontSizes.base};
     background-color: ${colors.black};
     color: white;
@@ -26,6 +25,15 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    font-family: ${fonts.primary};
+  }
+
+  p, a, table {
+    font-family: ${fonts.secondary};
+  }
+
+  p {
+    line-height: 1.3;
   }
 `
 

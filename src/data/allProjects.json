@@ -1,0 +1,99 @@
+[
+  {
+    "title": "Polatify",
+    "type": "Web App",
+    "deployed": true,
+    "featured": true,
+    "year": "2022",
+    "desc": "A web app for visualizing user top track & artist in polaroid photo style by using data that retrieved from the Spotify API.",
+    "tech": [
+      "Vue JS",
+      "Express",
+      "Tailwind CSS",
+      "Spotify API"
+    ],
+    "github": "https://github.com/fikri-albaihaqi/polatify",
+    "external": "https://polatify.cyclic.app/",
+    "image": "../src/assets/polatify.png"
+  },
+  {
+    "title": "Cinefo",
+    "type": "Web App",
+    "deployed": true,
+    "featured": true,
+    "year": "2022",
+    "desc": "Cinefo is a web app that show all information about movie and TV show like ratings, actors, etc.",
+    "tech": [
+      "Vue JS",
+      "Tailwind CSS",
+      "The Movie Database API"
+    ],
+    "github": "https://github.com/fikri-albaihaqi/cinefo",
+    "external": "https://cinefo.netlify.app/",
+    "image": "../src/assets/cinefo.png"
+  },
+  {
+    "title": "This is Indonesia",
+    "type": "Web App",
+    "deployed": true,
+    "featured": true,
+    "year": "2022",
+    "desc": "This is Indonesia is a website that contains information about Indonesia for traveller.",
+    "tech": [
+      "React JS",
+      "Tailwind CSS"
+    ],
+    "github": "https://github.com/fikri-albaihaqi/this-is-indonesia",
+    "external": "https://thisisindonesia.netlify.app/",
+    "image": "../src/assets/this-is-indo.png"
+  },
+  {
+    "title": "Whats the weather at?",
+    "type": "Web App",
+    "deployed": true,
+    "featured": false,
+    "year": "2022",
+    "desc": "A web app to find out the weather conditions in a location.",
+    "tech": [
+      "Vue JS",
+      "Tailwind CSS",
+      "OpenWeatherMap API"
+    ],
+    "github": "https://github.com/fikri-albaihaqi/weather-app",
+    "external": "https://whatstheweatherat.netlify.app/",
+    "image": "../src/assets/weather.svg"
+  },
+  {
+    "title": "Newsthetic",
+    "type": "Web App",
+    "deployed": false,
+    "featured": false,
+    "year": "2022",
+    "desc": "A collection of Indonesian news from multiple source.",
+    "tech": [
+      "React JS",
+      "Tailwind CSS",
+      "News API"
+    ],
+    "github": "https://github.com/fikri-albaihaqi/newsthetic",
+    "external": "",
+    "image": "../src/assets/newsthetic.svg"
+  },
+  {
+    "title": "Jaya Tirta",
+    "type": "Mobile App",
+    "deployed": false,
+    "featured": false,
+    "year": "2022",
+    "desc": "A collection of Indonesian news from multiple source.",
+    "tech": [
+      "Flutter",
+      "Python",
+      "FastAPI",
+      "Firebase"
+    ],
+    "github": "https://github.com/fikri-albaihaqi/jaya_tirta",
+    "external": "",
+    "image": "../src/assets/jaya-tirta.svg"
+  }
+]

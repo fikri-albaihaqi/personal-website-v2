@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import { useState } from "react"
+import styled, { keyframes } from "styled-components"
+import allProjects from '../data/allProjects.json'
+import { Link } from "react-router-dom"
 import { theme } from '../styles'
 const { colors, fontSizes, spacing } = theme
 
@@ -9,15 +10,42 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  margin: ${spacing.xl} 0;
+  width: 70vw;
+  margin: ${spacing.xxl} 0;
+`
+
+const gradient = keyframes`
+  to {
+    background-position: var(--bg-size) 0;
+  }
 `
 
 const SectionTitle = styled.h1`
-  font-size: ${fontSizes.x4l};
+  font-size: ${fontSizes.x5l};
+  align-self: flex-start;
+  --bg-size: 300%;
+    background: linear-gradient(
+      90deg, 
+      ${colors.yellow}, 
+      ${colors.pink}, 
+      ${colors.purple}, 
+      ${colors.lightBlue}, 
+      ${colors.purple},
+      ${colors.pink},
+      ${colors.yellow}
+    ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: ${gradient} 10s infinite linear;
 `
 
-const SeeAllProject = styled.a`
+const Desc = styled.p`
+  align-self: flex-start;
+  font-size: ${fontSizes.lg};
+`
+
+const SeeAllProject = styled(Link)`
   text-decoration: none;
   color: white;
   font-size: ${fontSizes.x3l};
@@ -29,7 +57,7 @@ const SeeAllProject = styled.a`
     content: "";
     width: 100%;
     position: absolute;
-    bottom: 8px;
+    bottom: 4px;
     height: 6px;
     left: 0;
     display: block;
@@ -44,68 +72,18 @@ const SeeAllProject = styled.a`
 
 
 const FeaturedProjects = () => {
-  const [projects, setProjects] = useState([
-    {
-      title: 'Polatify',
-      type: 'Web App',
-      deployed: true,
-      desc: 'A web app for visualizing user top track & artist in polaroid photo style by using data that retrieved from the Spotify API.',
-      tech: [
-        'Vue JS',
-        'Express',
-        'Tailwind CSS',
-        'Spotify API',
-      ],
-      links: [
-        'https://github.com/fikri-albaihaqi/polatify',
-        'https://polatify.cyclic.app/',
-      ],
-      image: '../src/assets/polatify.png',
-    },
-    {
-      title: 'Cinefo',
-      type: 'Web App',
-      deployed: true,
-      desc: 'Cinefo is a web app that show all information about movie and TV show like ratings, actors, etc.',
-      tech: [
-        'Vue JS',
-        'Tailwind CSS',
-        'The Movie Database API',
-      ],
-      links: [
-        'https://github.com/fikri-albaihaqi/cinefo',
-        'https://cinefo.netlify.app/'
-      ],
-      image: '../src/assets/cinefo.png',
-    },
-    {
-      title: 'This is Indonesia',
-      type: 'Web App',
-      deployed: true,
-      desc: 'This is Indonesia is a website that contains information about Indonesia for traveller.',
-      tech: [
-        'React JS',
-        'Tailwind CSS'
-      ],
-      links: [
-        'https://github.com/fikri-albaihaqi/this-is-indonesia',
-        'https://thisisindonesia.netlify.app/'
-      ],
-      image: '../src/assets/this-is-indo.png',
-    },
-  ])
-
   return (
     <Container>
-      <SectionTitle>Featured Projects</SectionTitle>
+      <SectionTitle>Featured Side Projects</SectionTitle>
+      {/* <Desc>Some noteworthy projects</Desc> */}
       <div>
         {
-          projects.map((project, i) => (
-            <Project key={i} project={project} />
+          allProjects.filter(project => project.featured).map((project, i) => (
+            <Project key={i} index={i} project={project} />
           ))
         }
       </div>
-      <SeeAllProject href="">
+      <SeeAllProject to="/all-projects" state={{ allProjects: allProjects }}>
         See all my projects
       </SeeAllProject>
     </Container>

@@ -87,7 +87,7 @@ const Header = () => {
         <Name>FIKRI ALBAIHAQI</Name>
       </TextContainer>
       <Desc>
-        I’m a front-end web developer based in Bandung. I like to craft solid and beautiful <br />
+        I’m a front-end web developer located in Bandung. I like to craft solid and beautiful <br />
         website with great user experience
       </Desc>
       <Circle>

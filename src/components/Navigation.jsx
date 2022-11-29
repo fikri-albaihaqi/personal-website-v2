@@ -1,13 +1,13 @@
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
+import allProjects from '../data/allProjects.json'
 import { theme } from '../styles'
 const { colors, fontSizes, spacing } = theme
 
-import IconMenu from './icons/IconMenu'
-
 const NavContainer = styled.nav`
   padding: ${spacing.lg};
-  background-color: ${colors.black};
+  background-color: ${({show}) => show ? colors.black : 'transparent'};
   position: ${({ show }) => show ? 'fixed' : 'absolute'};
   z-index: 10;
 `
@@ -18,13 +18,12 @@ const Nav = styled.div`
   justify-content: space-between;
 `
 
-const Logo = styled.h1`
+const Logo = styled(Link)`
   font-weight: bold;
   font-size: ${fontSizes.x3l};
+  text-decoration: none;
+  color: white;
   cursor: pointer;
-  h1:hover {
-
-  }
 `
 
 const MenuIcon = styled.div`
@@ -142,7 +141,7 @@ const Social = styled.a`
   color: white;
   position: relative;
   font-size: ${fontSizes.xl};
-  margin-right: ${spacing.sm};
+  margin-right: ${props => props.row ? '16px' : '0'};
 
   &::before {
     background: ${colors.purple};
@@ -169,28 +168,28 @@ const Navbar = () => {
   return (
     <NavContainer show={showMenu}>
       <Nav>
-        <Logo>FA</Logo>
-        <MenuIcon show={showMenu}>
-          <a onClick={() => setShowMenu(!showMenu)}></a>
+        <Logo to='/'>FA</Logo>
+        <MenuIcon show={showMenu} onClick={() => setShowMenu(!showMenu)}>
+          <a></a>
         </MenuIcon>
       </Nav>
       <Menu show={showMenu}>
         <MenuList>
           <MenuItem>
-            <MenuNumber>01</MenuNumber> <a href="">HOME</a>
+            <MenuNumber>01</MenuNumber> <Link to="/" onClick={() => setShowMenu(!showMenu)}>HOME</Link>
           </MenuItem>
           <MenuItem>
-            <MenuNumber>02</MenuNumber> <a href="">ALL PROJECTS</a>
+            <MenuNumber>02</MenuNumber> <Link to="/all-projects" state={{ allProjects: allProjects }} onClick={() => setShowMenu(!showMenu)}>ALL PROJECTS</Link>
           </MenuItem>
           <MenuItem>
-            <MenuNumber>03</MenuNumber> <a href="">ABOUT ME</a>
+            <MenuNumber>03</MenuNumber> <Link to="/about" onClick={() => setShowMenu(!showMenu)}>ABOUT ME</Link>
           </MenuItem>
         </MenuList>
         <Contact>
           <div>
-            <Social href=''>Github</Social>
-            <Social href=''>Codepen</Social>
-            <Social href=''>Linkedin</Social>
+            <Social href='' row>Github</Social>
+            <Social href='' row>Codepen</Social>
+            <Social href='' row>Linkedin</Social>
           </div>
           <Social href=''>fikrialbaihaqi@gmail.com</Social>
         </Contact>
