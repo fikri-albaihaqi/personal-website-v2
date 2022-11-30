@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 import { theme } from '../styles'
 import WarpBackground from './WarpBackground'
 
-const { colors, fontSizes, spacing } = theme
+const { breakpoints, colors, fontSizes, spacing } = theme
 
 const Container = styled.div`
   width: 90vw;
@@ -20,13 +20,28 @@ const BG = styled.div`
 `
 
 const AboutContainer = styled.div`
-  width: 60%;
   display: flex;
   flex-direction: column;
+
+  @media (${breakpoints.xs}) {
+    width: 100%;
+  }
+
+  @media (${breakpoints.md}) {
+    width: 100%;
+  }
+
+  @media (${breakpoints.lg}) {
+    width: 60%;
+  }
 `
 
 const About = styled.p`
   font-size: ${fontSizes.x2l};
+
+  @media (${breakpoints.xs}) {
+    font-size: ${fontSizes.lg};
+  }
 `
 
 const Contact = styled.div`
@@ -36,6 +51,10 @@ const Contact = styled.div`
   width: 90vw;
   bottom: 10%;
   margin-bottom: ${spacing.md};
+  
+  @media (${breakpoints.xs}) {
+    display: none;
+  }
 `
 
 const Social = styled.a`
@@ -44,6 +63,10 @@ const Social = styled.a`
   position: relative;
   font-size: ${fontSizes.xl};
   margin-right: ${props => props.row ? '16px' : '0'};
+
+  @media (${breakpoints.xs}) {
+    font-size: ${fontSizes.lg};
+  }
 
   &::before {
     background: ${colors.purple};
@@ -83,8 +106,8 @@ const AboutMe = () => {
       </AboutContainer>
       <Contact>
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-          <Social href='' row>Github</Social>
-          <Social href='' row>Codepen</Social>
+          <Social href='https://github.com/fikri-albaihaqi' target='_blank' row>Github</Social>
+          <Social href='https://codepen.io/Fikri-Code' target='_blank' row>Codepen</Social>
           <Social href='' row>Linkedin</Social>
         </div>
         <Social href='' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">fikrialbaihaqi@gmail.com</Social>

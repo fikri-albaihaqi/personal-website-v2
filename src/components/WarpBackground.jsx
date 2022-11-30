@@ -39,7 +39,7 @@ const WarpBackground = () => {
       vertices.positions.push(Math.random() * 600 - 300);
       if (i % 3 === 0) {
         vertices.accelerations.push(0);
-        vertices.velocities.push(0.1);
+        vertices.velocities.push(4);
       }
     }
     starBox.setAttribute('position', new THREE.BufferAttribute(new Float32Array(vertices.positions), 3));

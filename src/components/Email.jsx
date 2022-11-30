@@ -1,18 +1,31 @@
 import styled from 'styled-components'
 import { theme } from '../styles'
-const { colors, fontSizes, spacing } = theme
+const { breakpoints, colors, fontSizes, spacing } = theme
 
 const RightSide = styled.div`
-  display: flex;
   position: fixed;
   right: 5%;
   bottom: 0;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+
+  @media (${breakpoints.xs}) {
+    display: none;
+  }
+
+  @media (${breakpoints.sm}) {
+    display: none;
+  }
+
+  @media (${breakpoints.lg}) {
+    display: flex;
+  }
+
   a {
     text-decoration: none;
     color: ${colors.grey};
     font-size: ${fontSizes.sm};
+    margin-bottom: ${spacing.sm};
   }
   a:hover {
     color: white;

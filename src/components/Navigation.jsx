@@ -1,19 +1,18 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import styled from 'styled-components'
 import allProjects from '../data/allProjects.json'
 import { theme } from '../styles'
-const { colors, fontSizes, spacing } = theme
+const { breakpoints, colors, fontSizes, spacing } = theme
 
 const NavContainer = styled.nav`
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${spacing.lg};
-  width: 100vw;
-  background-color: ${({show}) => show ? colors.black : 'transparent'};
+  background-color: ${({ show }) => show ? colors.black : 'transparent'};
   position: ${({ show }) => show ? 'fixed' : 'absolute'};
-  z-index: 10;
+  z-index: ${({ show }) => show ? '10' : '0'};
 `
 
 const Nav = styled.div`
@@ -21,6 +20,7 @@ const Nav = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: ${spacing.lg} 0;
 `
 
 const Logo = styled(Link)`
@@ -33,9 +33,6 @@ const Logo = styled(Link)`
 
 const MenuIcon = styled.div`
   stroke: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 
   a {
@@ -56,20 +53,20 @@ const MenuIcon = styled.div`
     height: 2px;
     position: absolute;
     transition: 0.2s ease;
-    transform: ${({show}) => show ? 'rotate(45deg)' : 'rotate(0deg)'};
+    transform: ${({ show }) => show ? 'rotate(45deg)' : 'rotate(0deg)'};
     background-color: white;
   }
 
   a::after {
     content: '';
-    top: ${({show}) => show ? '0' : 'auto'};
-    bottom: ${({show}) => show ? 'auto' : '0'};
+    top: ${({ show }) => show ? '0' : 'auto'};
+    bottom: ${({ show }) => show ? 'auto' : '0'};
     right: 0;
-    width: ${({show}) => show ? '100%' : '72%'};
+    width: ${({ show }) => show ? '100%' : '72%'};
     height: 2px;
     position: absolute;
     transition: 0.2s ease;
-    transform: ${({show}) => show ? 'rotate(-45deg)' : 'rotate(0deg)'};
+    transform: ${({ show }) => show ? 'rotate(-45deg)' : 'rotate(0deg)'};
     background-color: white;
   }
 
@@ -83,17 +80,30 @@ const MenuIcon = styled.div`
 `
 
 const Menu = styled.div`
-  height: 81vh;
+  display: flex;
+  visibility: ${({ show }) => show ? 'visible' : 'hidden'};
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
   background-color: ${colors.black};
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: ${({ show }) => show ? 'flex' : 'none'};
+  opacity: ${({ show }) => show ? '1' : '0'};
+  z-index: ${({ show }) => show ? '-1' : '-99'};
+  transition: all 0.5s ease-in;
 `
 
 const MenuList = styled.div`
   display: flex;
   flex-direction: column;
+  a {
+    color: white;
+  }
+
+  ${({ location }) => location === '/' ? '& div:nth-child(1) a::before {height: 80%;}'
+    : location === '/all-projects' ? '& div:nth-child(2) a::before {height: 80%;}'
+      : location === '/about' ? '& div:nth-child(3) a::before {height: 80%;}' : ''}
 `
 
 const MenuNumber = styled.span`
@@ -106,10 +116,12 @@ const MenuItem = styled.div`
   margin: ${spacing.sm} 0;
   cursor: pointer;
 
+  @media (${breakpoints.xs}) { 
+    font-size: ${fontSizes.x3l};
+  }
+
   a {
     text-decoration: none;
-    color: white;
-
     position: sticky;
 
     &::before {
@@ -119,7 +131,7 @@ const MenuItem = styled.div`
       width: 100%;
       position: absolute;
       bottom: 8px;
-      height: 0px;
+      height: 0;
       left: 0;
       display: block;
       transition: height 0.5s ease-in-out;
@@ -139,6 +151,10 @@ const Contact = styled.div`
   width: 90vw;
   bottom: 0;
   margin-bottom: ${spacing.md};
+
+  @media (${breakpoints.xs}) {
+    display: none;
+  }
 `
 
 const Social = styled.a`
@@ -154,7 +170,7 @@ const Social = styled.a`
     content: "";
     width: 100%;
     position: absolute;
-    bottom: 4px;
+    bottom: 2px;
     height: 6px;
     left: 0;
     display: block;
@@ -169,6 +185,8 @@ const Social = styled.a`
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const [projects, setProjects] = useState(allProjects)
+  const location = useLocation().pathname
 
   return (
     <NavContainer show={showMenu}>
@@ -179,22 +197,22 @@ const Navbar = () => {
         </MenuIcon>
       </Nav>
       <Menu show={showMenu}>
-        <MenuList>
-          <MenuItem>
+        <MenuList location={location} show={showMenu}>
+          <MenuItem location={location}>
             <MenuNumber>01</MenuNumber> <Link to="/" onClick={() => setShowMenu(!showMenu)}>HOME</Link>
           </MenuItem>
-          <MenuItem>
-            <MenuNumber>02</MenuNumber> <Link to="/all-projects" state={{ allProjects: allProjects }} onClick={() => setShowMenu(!showMenu)}>ALL PROJECTS</Link>
+          <MenuItem location={location}>
+            <MenuNumber>02</MenuNumber> <Link to="/all-projects" state={{ allProjects: projects }} onClick={() => setShowMenu(!showMenu)}>ALL PROJECTS</Link>
           </MenuItem>
-          <MenuItem>
+          <MenuItem location={location}>
             <MenuNumber>03</MenuNumber> <Link to="/about" onClick={() => setShowMenu(!showMenu)}>ABOUT ME</Link>
           </MenuItem>
         </MenuList>
         <Contact>
           <div>
-            <Social href='' row>Github</Social>
-            <Social href='' row>Codepen</Social>
-            <Social href='' row>Linkedin</Social>
+            <Social href='https://github.com/fikri-albaihaqi' target='_blank' row>Github</Social>
+            <Social href='https://codepen.io/Fikri-Code' target='_blank' row>Codepen</Social>
+            <Social href='' target='_blank' row>Linkedin</Social>
           </div>
           <Social href=''>fikrialbaihaqi@gmail.com</Social>
         </Contact>

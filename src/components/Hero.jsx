@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { theme } from '../styles'
-const { colors, fontSizes, spacing } = theme
+const { breakpoints, colors, fontSizes, fontWeights, spacing } = theme
 
 const Container = styled.header`
   width: 100vw;
@@ -13,11 +13,22 @@ const Container = styled.header`
 
 const TextContainer = styled.div`
   display: flex;
+  justify-content: center;
+  width: 90vw;
+
+  @media (${breakpoints.xs}) {
+    flex-direction: column;
+  }
 `
 
 const WelcomeText = styled.h1`
   font-size: ${fontSizes.x5l};
   line-height: 1;
+
+  @media (${breakpoints.xs}) {
+    font-size: ${fontSizes.sm};
+    font-weight: ${fontWeights.normal};
+  }
 `
 
 const gradient = keyframes`
@@ -45,11 +56,22 @@ const Name = styled.h1`
   -webkit-background-clip: text;
   margin-left: ${spacing.xs};
   animation: ${gradient} 20s infinite linear;
+
+  @media (${breakpoints.xs}) {
+    font-size: ${fontSizes.x4l};
+    margin-top: ${spacing.sm};
+    margin-left: 0;
+  }
 `
 
 const Desc = styled.p`
   font-size: ${fontSizes.lg};
   text-align: center;
+  width: 90vw;
+
+  @media (${breakpoints.xs}) {
+    text-align: left;
+  }
 `
 
 const floating = keyframes`

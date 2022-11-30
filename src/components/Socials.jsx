@@ -3,14 +3,25 @@ import IconGithub from './icons/IconGithub'
 import IconCodepen from './icons/IconCodepen'
 import styled from 'styled-components'
 import { theme } from '../styles'
-const { colors, spacing } = theme
+const { breakpoints, colors, spacing } = theme
 
 const LeftSide = styled.div`
-  display: flex;
   flex-direction: column;
   position: fixed;
   bottom: 0;
   left: 5%;
+
+  @media (${breakpoints.xs}) {
+    display: none;
+  }
+
+  @media (${breakpoints.sm}) {
+    display: none;
+  }
+
+  @media (${breakpoints.lg}) {
+    display: flex;
+  }
 `
 
 const [Github, Codepen, Linkedin] = Array(3).fill(styled.div`

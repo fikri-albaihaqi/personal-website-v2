@@ -1,8 +1,11 @@
 import styled, { keyframes } from "styled-components"
 import IconEmail from "./icons/IconEmail"
 import IconWhatsapp from "./icons/IconWhatsapp"
+import IconGithub from "./icons/IconGithub"
+import IconCodepen from "./icons/IconCodepen"
+import IconLinkedin from "./icons/IconLinkedin"
 import { theme } from '../styles'
-const { colors, fontSizes, spacing } = theme
+const { breakpoints, colors, fontSizes, fontWeights, spacing } = theme
 
 const Container = styled.div`
   display: flex;
@@ -10,11 +13,12 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  position: relative;
 
   p {
     text-align: center;
-    font-size: ${fontSizes.xl};
+    width: 80vw;
   }
 `
 
@@ -24,9 +28,25 @@ const gradient = keyframes`
   }
 `
 
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: ${fontSizes.xl};
+  }
+`
+
 const GetInTouch = styled.h1`
   font-weight: bold;
   font-size: ${fontSizes.x5l};
+
+  @media (${breakpoints.xs}) {
+    font-size: ${fontSizes.x3l};
+  }
+
   --bg-size: 300%;
   background: linear-gradient(
     90deg, 
@@ -46,46 +66,94 @@ const GetInTouch = styled.h1`
 
 const ContactContainer = styled.div`
   display: flex;
+
+  & div:nth-child(1), div:nth-child(2), div:nth-child(3) {
+    @media (${breakpoints.lg}) {
+      display: none;
+    }
+
+    svg {
+      width: 20px;
+      stroke: ${colors.grey};
+    }
+
+    a:hover svg {
+      stroke: white;
+    }
+  }
+
+  & div:nth-child(4), div:nth-child(5) {
+    svg {
+      width: 20px;
+
+      @media (${breakpoints.lg}) {
+        width: 40px;
+      }
+    }
+
+    svg path {
+      fill: ${colors.grey};
+    }
+
+    a:hover svg path {
+      fill: white;
+    }
+  }
 `
 
-const [Email, Whatsapp] = Array(3).fill(styled.div`
-  margin-right: ${spacing.md};
-  cursor: pointer;
-  svg {
-    width: 40px;
-  }
-
-  svg path {
-    fill: ${colors.grey};
-  }
-
-  a:hover svg path {
-    fill: white;
-  }
+const [Email, Whatsapp, Github, Codepen, Linkedin] = Array(5).fill(styled.div`
+  margin: ${spacing.base};
 `)
+
+const Copyright = styled.p`
+  position: absolute;
+  bottom: 0;
+  font-weight: ${fontWeights.light};
+  font-size: ${fontSizes.base};
+`
 
 const Contact = () => {
   return (
     <Container>
-      <GetInTouch data-aos="fade-up" data-aos-duration="1000">
-        LET'S GET IN TOUCH
-      </GetInTouch>
-      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay='600'>
-        I’m currently available for full-time employment in Bandung <br />
-        and freelance projects.
-      </p>
-      <ContactContainer>
-        <Email>
-          <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='800'>
-            <IconEmail />
-          </a>
-        </Email>
-        <Whatsapp>
-          <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1000'>
-            <IconWhatsapp />
-          </a>
-        </Whatsapp>
-      </ContactContainer>
+      <TextContainer>
+        <GetInTouch data-aos="fade-up" data-aos-duration="1000">
+          LET'S GET IN TOUCH
+        </GetInTouch>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay='600'>
+          I’m currently available for full-time employment in Bandung <br />
+          and freelance projects.
+        </p>
+        <ContactContainer>
+          <Github>
+            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='800'>
+              <IconGithub />
+            </a>
+          </Github>
+          <Codepen>
+            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1000'>
+              <IconCodepen />
+            </a>
+          </Codepen>
+          <Linkedin>
+            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1200'>
+              <IconLinkedin />
+            </a>
+          </Linkedin>
+          <Whatsapp>
+            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1400'>
+              <IconWhatsapp />
+            </a>
+          </Whatsapp>
+          <Email>
+            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1600'>
+              <IconEmail />
+            </a>
+          </Email>
+        </ContactContainer>
+      </TextContainer>
+      <Copyright>
+        &copy; Fikri Albaihaqi 2022
+      </Copyright>
     </Container>
   )
 }

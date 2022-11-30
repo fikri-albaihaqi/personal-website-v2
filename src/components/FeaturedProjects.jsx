@@ -1,8 +1,9 @@
 import styled, { keyframes } from "styled-components"
+import { useState } from "react"
 import allProjects from '../data/allProjects.json'
 import { Link } from "react-router-dom"
 import { theme } from '../styles'
-const { colors, fontSizes, spacing } = theme
+const { breakpoints, colors, fontSizes, spacing } = theme
 
 import Project from "./Project"
 
@@ -10,7 +11,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70vw;
   margin: ${spacing.xxl} 0;
 `
 
@@ -22,7 +22,12 @@ const gradient = keyframes`
 
 const SectionTitle = styled.h1`
   font-size: ${fontSizes.x5l};
-  align-self: flex-start;
+
+  @media (${breakpoints.xs}) {
+    font-size: ${fontSizes.x3l};
+    text-align: center;
+  }
+
   --bg-size: 300%;
     background: linear-gradient(
       90deg, 
@@ -72,17 +77,19 @@ const SeeAllProject = styled(Link)`
 
 
 const FeaturedProjects = () => {
+  const [projects, setProjects] = useState(allProjects)
+
   return (
     <Container>
       <SectionTitle data-aos="fade-up" data-aos-duration="1000">Featured Side Projects</SectionTitle>
       <div>
         {
-          allProjects.filter(project => project.featured).map((project, i) => (
+          projects.filter(project => project.featured).map((project, i) => (
             <Project key={i} index={i} project={project} />
           ))
         }
       </div>
-      <SeeAllProject to="/all-projects" state={{ allProjects: allProjects }} data-aos="fade-up" data-aos-duration="1000">
+      <SeeAllProject to="/all-projects" state={{ allProjects: projects }} data-aos="fade-up" data-aos-duration="1000">
         See all my projects
       </SeeAllProject>
     </Container>

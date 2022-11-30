@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components"
 import { useLocation } from "react-router-dom"
 import { theme } from '../styles'
-const { colors, fontSizes, fontWeights, spacing } = theme
+const { breakpoints, colors, fontSizes, fontWeights, spacing } = theme
 
 import Socials from './Socials'
 import Email from "./Email"
@@ -23,6 +23,10 @@ const Container = styled.div`
   width: 70vw;
   margin: ${spacing.xxl} 0;
 
+  @media (${breakpoints.xs}) {
+    width: 90vw;
+  }
+
   table {
     width: 70vw;
     border-collapse: collapse;
@@ -39,6 +43,12 @@ const Container = styled.div`
       border-bottom: solid ${colors.grey} 2px;
     }
 
+    @media (${breakpoints.xs}) {
+        th:nth-child(2) {
+          display: none;
+        }
+      }
+
     tbody {
       font-size: ${fontSizes.xl};
 
@@ -50,6 +60,12 @@ const Container = styled.div`
         font-weight: ${fontWeights.normal};
         font-size: ${fontSizes.xl};
         color: white;
+      }
+
+      @media (${breakpoints.xs}) {
+        td:nth-child(2) {
+          display: none;
+        }
       }
 
       td {
@@ -70,6 +86,11 @@ const gradient = keyframes`
 const SectionTitle = styled.h1`
   font-size: ${fontSizes.x5l};
   align-self: flex-start;
+
+  @media (${breakpoints.xs}) {
+    font-size: ${fontSizes.x3l};
+    align-self: center;
+  }
   --bg-size: 300%;
     background: linear-gradient(
       90deg, 
@@ -90,6 +111,10 @@ const SectionTitle = styled.h1`
 const Desc = styled.p`
   align-self: flex-start;
   font-size: ${fontSizes.lg};
+
+  @media (${breakpoints.xs}) {
+    align-self: center;
+  }
 `
 
 const LinkIcon = styled.span`
