@@ -42,7 +42,7 @@ const RightLine = styled.div`
 const Email = () => {
   return (
     <RightSide data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-      <a href="">
+      <a href="mailto:fikrialbaihaqi@gmail.com">
         fikrialbaihaqi@gmail.com
       </a>
       <RightLine />

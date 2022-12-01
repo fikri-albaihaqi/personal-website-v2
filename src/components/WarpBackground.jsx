@@ -44,7 +44,7 @@ const WarpBackground = () => {
     }
     starBox.setAttribute('position', new THREE.BufferAttribute(new Float32Array(vertices.positions), 3));
 
-    let starImage = new THREE.TextureLoader().load('../src/assets/circle.png');
+    let starImage = new THREE.TextureLoader().load('https://ik.imagekit.io/fikri/portfolio/assets/circle.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669879506579');
     let starMaterial = new THREE.PointsMaterial({
       color: 0xA162E8,
       size: 1,

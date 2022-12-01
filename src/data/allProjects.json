@@ -14,7 +14,7 @@
     ],
     "github": "https://github.com/fikri-albaihaqi/polatify",
     "external": "https://polatify.cyclic.app/",
-    "image": "../src/assets/polatify.png"
+    "image": "https://ik.imagekit.io/fikri/portfolio/projects/polatify.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669879460814"
   },
   {
     "title": "Cinefo",
@@ -22,7 +22,7 @@
     "deployed": true,
     "featured": true,
     "year": "2022",
-    "desc": "Cinefo is a web app that show all information about movie and TV show like ratings, actors, etc.",
+    "desc": "Cinefo is a website that show all information about the cinematic world like movie, TV show, actors, etc.",
     "tech": [
       "Vue JS",
       "Tailwind CSS",
@@ -30,7 +30,7 @@
     ],
     "github": "https://github.com/fikri-albaihaqi/cinefo",
     "external": "https://cinefo.netlify.app/",
-    "image": "../src/assets/cinefo.png"
+    "image": "https://ik.imagekit.io/fikri/portfolio/projects/cinefo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669879460880"
   },
   {
     "title": "This is Indonesia",
@@ -38,14 +38,30 @@
     "deployed": true,
     "featured": true,
     "year": "2022",
-    "desc": "This is Indonesia is a website that contains information about Indonesia for traveller.",
+    "desc": "This is Indonesia is a website that contains information about popular places in Indonesia for traveller.",
     "tech": [
       "React JS",
       "Tailwind CSS"
     ],
     "github": "https://github.com/fikri-albaihaqi/this-is-indonesia",
     "external": "https://thisisindonesia.netlify.app/",
-    "image": "../src/assets/this-is-indo.png"
+    "image": "https://ik.imagekit.io/fikri/portfolio/projects/this-is-indo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669879461734"
+  },
+  {
+    "title": "Personal Website V2",
+    "type": "Web App",
+    "deployed": true,
+    "featured": false,
+    "year": "2022",
+    "desc": "Second iteration of my personal website built with React JS.",
+    "tech": [
+      "React JS",
+      "Styled Components",
+      "Three.js"
+    ],
+    "github": "https://github.com/fikri-albaihaqi/personal-website-v2",
+    "external": "https://fikrialbaihaqi.netlify.app/",
+    "image": ""
   },
   {
     "title": "Whats the weather at?",
@@ -61,7 +77,7 @@
     ],
     "github": "https://github.com/fikri-albaihaqi/weather-app",
     "external": "https://whatstheweatherat.netlify.app/",
-    "image": "../src/assets/weather.svg"
+    "image": "https://ik.imagekit.io/fikri/portfolio/projects/weather.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669879460758"
   },
   {
     "title": "Newsthetic",
@@ -77,7 +93,7 @@
     ],
     "github": "https://github.com/fikri-albaihaqi/newsthetic",
     "external": "",
-    "image": "../src/assets/newsthetic.svg"
+    "image": "https://ik.imagekit.io/fikri/portfolio/projects/newsthetic.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669879460558"
   },
   {
     "title": "Jaya Tirta",
@@ -94,6 +110,6 @@
     ],
     "github": "https://github.com/fikri-albaihaqi/jaya_tirta",
     "external": "",
-    "image": "../src/assets/jaya-tirta.svg"
+    "image": "https://ik.imagekit.io/fikri/portfolio/projects/jaya-tirta.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669879460800"
   }
 ]

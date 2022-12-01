@@ -58,7 +58,7 @@ const Socials = () => {
         </a>
       </Codepen>
       <Linkedin>
-        <a href="" target='_blank'>
+        <a href="https://www.linkedin.com/in/muhamad-fikri-albaihaqi-0a8444219/" target='_blank'>
           <IconLinkedin />
         </a>
       </Linkedin>

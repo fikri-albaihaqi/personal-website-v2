@@ -212,9 +212,9 @@ const Navbar = () => {
           <div>
             <Social href='https://github.com/fikri-albaihaqi' target='_blank' row>Github</Social>
             <Social href='https://codepen.io/Fikri-Code' target='_blank' row>Codepen</Social>
-            <Social href='' target='_blank' row>Linkedin</Social>
+            <Social href='https://www.linkedin.com/in/muhamad-fikri-albaihaqi-0a8444219/' target='_blank' row>Linkedin</Social>
           </div>
-          <Social href=''>fikrialbaihaqi@gmail.com</Social>
+          <Social href='mailto:fikrialbaihaqi@gmail.com'>fikrialbaihaqi@gmail.com</Social>
         </Contact>
       </Menu>
     </NavContainer>

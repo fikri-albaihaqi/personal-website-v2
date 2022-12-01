@@ -101,16 +101,16 @@ const AboutMe = () => {
           technologies.
         </About>
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-          <Social href=''>My resume</Social>
+          <Social href='./Resume.pdf' target='_blank'>My resume</Social>
         </div>
       </AboutContainer>
       <Contact>
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
           <Social href='https://github.com/fikri-albaihaqi' target='_blank' row>Github</Social>
           <Social href='https://codepen.io/Fikri-Code' target='_blank' row>Codepen</Social>
-          <Social href='' row>Linkedin</Social>
+          <Social href='https://www.linkedin.com/in/muhamad-fikri-albaihaqi-0a8444219/' row>Linkedin</Social>
         </div>
-        <Social href='' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">fikrialbaihaqi@gmail.com</Social>
+        <Social href='mailto:fikrialbaihaqi@gmail.com' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">fikrialbaihaqi@gmail.com</Social>
       </Contact>
     </Container>
   )
