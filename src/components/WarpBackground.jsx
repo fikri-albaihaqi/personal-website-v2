@@ -25,6 +25,7 @@ const WarpBackground = () => {
 
     let renderer = new THREE.WebGLRenderer;
     renderer.setSize(window.innerWidth, window.innerHeight);
+    scene.background = new THREE.Color(0x020306)
     bg.current.appendChild(renderer.domElement);
     document.addEventListener('mousemove', onMouseMove, false);
     window.addEventListener('resize', onResize, false);

@@ -125,27 +125,27 @@ const Contact = () => {
         </p>
         <ContactContainer>
           <Github>
-            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='800'>
+            <a href="https://github.com/fikri-albaihaqi" target='_blank' data-aos="fade-up" data-aos-duration="1000" data-aos-delay='800'>
               <IconGithub />
             </a>
           </Github>
           <Codepen>
-            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1000'>
+            <a href="https://codepen.io/Fikri-Code" target='_blank' data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1000'>
               <IconCodepen />
             </a>
           </Codepen>
           <Linkedin>
-            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1200'>
+            <a href="https://www.linkedin.com/in/muhamad-fikri-albaihaqi-0a8444219/" target='_blank' data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1200'>
               <IconLinkedin />
             </a>
           </Linkedin>
           <Whatsapp>
-            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1400'>
+            <a href="https://wa.me/+6282218644649" target='_blank' data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1400'>
               <IconWhatsapp />
             </a>
           </Whatsapp>
           <Email>
-            <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1600'>
+            <a href="mailto:fikrialbaihaqi@gmail.com" target='_blank' data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1600'>
               <IconEmail />
             </a>
           </Email>
