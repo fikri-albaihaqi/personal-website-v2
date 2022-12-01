@@ -135,7 +135,7 @@ const Contact = () => {
             </a>
           </Codepen>
           <Linkedin>
-            <a href="https://www.linkedin.com/in/muhamad-fikri-albaihaqi-0a8444219/" target='_blank' data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1200'>
+            <a href="https://www.linkedin.com/in/fikri-albaihaqi-0a8444219/" target='_blank' data-aos="fade-up" data-aos-duration="1000" data-aos-delay='1200'>
               <IconLinkedin />
             </a>
           </Linkedin>

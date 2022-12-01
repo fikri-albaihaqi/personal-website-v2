@@ -108,7 +108,7 @@ const AboutMe = () => {
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
           <Social href='https://github.com/fikri-albaihaqi' target='_blank' row>Github</Social>
           <Social href='https://codepen.io/Fikri-Code' target='_blank' row>Codepen</Social>
-          <Social href='https://www.linkedin.com/in/muhamad-fikri-albaihaqi-0a8444219/' row>Linkedin</Social>
+          <Social href='https://www.linkedin.com/in/fikri-albaihaqi-0a8444219/' row>Linkedin</Social>
         </div>
         <Social href='mailto:fikrialbaihaqi@gmail.com' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">fikrialbaihaqi@gmail.com</Social>
       </Contact>
