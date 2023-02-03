@@ -119,8 +119,8 @@ const Contact = () => {
           LET'S GET IN TOUCH
         </GetInTouch>
         <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay='600'>
-          I’m currently available for full-time employment in Bandung <br />
-          and freelance projects.
+          Although I’m not currently looking for any new opportunities for full-time employment, <br />
+          I'm always open for some freelance projects. So don't be shy to hit my inbox!
         </p>
         <ContactContainer>
           <Github>
