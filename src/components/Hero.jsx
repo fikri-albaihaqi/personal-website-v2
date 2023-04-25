@@ -109,8 +109,8 @@ const Header = () => {
         <Name data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">FIKRI ALBAIHAQI</Name>
       </TextContainer>
       <Desc data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-        I’m a front-end web developer located in Bandung. I like to craft solid and beautiful <br />
-        website with great user experience
+        I’m a web developer located in Bandung, Indonesia. I like to craft solid and beautiful <br />
+        website with great user experience. 
       </Desc>
       <Circle data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1600">
         <span className="material-symbols-outlined text-white">

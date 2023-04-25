@@ -95,10 +95,9 @@ const AboutMe = () => {
       </BG>
       <AboutContainer>
         <About data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-          Hello, my name is Fikri Albaihaqi.  I’m a front-end developer from Bandung, Indonesia.  I recently graduated majoring in
-          informatics engineering at the Bandung State Polytechnic.  I’m always fascinated by the world of front-end website development
-          and i enjoy building a solid, dynamic, and beautiful website.  I’m always curious to learn something when it comes to new
-          technologies.
+          Hello, my name is Fikri Albaihaqi.  I’m a Web Developer from Bandung, Indonesia. I’m mainly focus on frontend website 
+          development, but I'm also can do some backend stuff. I’m always curious to learn something when it comes to new 
+          technologies. Currently Web Developer at PT. Dwidasa Samsara Indonesia.
         </About>
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
           <Social href='./Resume.pdf' target='_blank'>My resume</Social>
