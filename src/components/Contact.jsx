@@ -151,7 +151,7 @@ const Contact = () => {
         </ContactContainer>
       </TextContainer>
       <Copyright>
-        &copy; Fikri Albaihaqi 2022
+        &copy; Fikri Albaihaqi 2023
       </Copyright>
     </Container>
   )

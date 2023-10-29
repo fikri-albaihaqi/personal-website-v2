@@ -6,7 +6,7 @@ const RightSide = styled.div`
   position: fixed;
   right: 5%;
   bottom: 0;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   text-orientation: mixed;
 
   @media (${breakpoints.xs}) {
@@ -26,9 +26,11 @@ const RightSide = styled.div`
     color: ${colors.grey};
     font-size: ${fontSizes.sm};
     margin-bottom: ${spacing.sm};
+    transition: 0.3s ease-in-out;
   }
   a:hover {
     color: white;
+    padding-bottom: 4px;
   }
 `
 

@@ -30,10 +30,12 @@ const [Github, Codepen, Linkedin] = Array(3).fill(styled.div`
   svg {
     stroke: ${colors.grey};
     width: 20px;
+    transition: 0.3s ease-in-out;
   }
 
   a:hover svg {
     stroke: white;
+    margin-bottom: 4px;
   }
 `)
 
